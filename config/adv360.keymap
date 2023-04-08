@@ -41,7 +41,7 @@
             bindings = <
             &kp N1    &kp N2    &kp N3    &kp N4  &kp N5  &kp N6                   &tog 1                                                                                         &mo 3  &kp N7    &kp N8     &kp N9         &kp N0  &kp MINUS  &kp EQUAL
          &kp GRAVE     &kp Q     &kp W     &kp E   &kp R   &kp T                    &none                                                                                         &none   &kp Y     &kp U      &kp I          &kp O      &kp P   &kp LBKT
- &kp RIGHT_BRACKET     &kp A     &kp S     &kp D   &kp F   &kp G                    &none   &mt LALT DEL       &kp LGUI   &none   &none         &kp LGUI  &mt LALT ESC            &none   &kp H     &kp J      &kp K          &kp L   &kp SEMI    &kp SQT
+ &kp RIGHT_BRACKET     &kp A     &kp S     &kp D   &kp F   &kp G                    &none   &mt LALT ESC       &kp LGUI   &none   &none         &kp LGUI  &mt LALT DEL            &none   &kp H     &kp J      &kp K          &kp L   &kp SEMI    &kp SQT
          &kp LSHFT     &kp Z     &kp X     &kp C   &kp V   &kp B                    &none          &none       &kp HOME   &none   &none        &kp PG_UP         &none            &none   &kp N     &kp M  &kp COMMA        &kp DOT   &kp FSLH  &kp RSHFT
              &mo 2  &kp CAPS  &kp PLUS  &kp DOWN  &kp UP                    &mt LCTRL TAB  &kp BACKSPACE  &mt LSHFT END                  &mt RSHFT PG_DN     &kp SPACE  &mt LCTRL ENTER          &kp LEFT  &kp RIGHT  &kp BACKSLASH   &kp PIPE      &mo 2
             >;
