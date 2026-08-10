@@ -31,23 +31,13 @@
 
         #endif
 
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         amp_pct: amp_pct {
             compatible = "zmk,behavior-mod-morph";
             label = "AMP_PCT";
             bindings = <&kp AMPERSAND>, <&kp PERCENT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         lbrckt_7: lbrckt_7 {
@@ -56,7 +46,7 @@
             bindings = <&kp LEFT_BRACKET>, <&kp N7>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         lbrace_5: lbrace_5 {
@@ -65,7 +55,7 @@
             bindings = <&kp LEFT_BRACE>, <&kp N5>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         rbrace_3: rbrace_3 {
@@ -74,7 +64,7 @@
             bindings = <&kp RIGHT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         lparen_1: lparen_1 {
@@ -83,7 +73,7 @@
             bindings = <&kp LEFT_PARENTHESIS>, <&kp N1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         equal_9: equal_9 {
@@ -92,7 +82,7 @@
             bindings = <&kp EQUAL>, <&kp N9>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         asterisk_0: asterisk_0 {
@@ -101,7 +91,7 @@
             bindings = <&kp ASTERISK>, <&kp N0>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         rparen_2: rparen_2 {
@@ -110,7 +100,7 @@
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp NUMBER_2>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         plus_4: plus_4 {
@@ -119,7 +109,7 @@
             bindings = <&kp PLUS>, <&kp NUMBER_4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         rbrckt_6: rbrckt_6 {
@@ -128,7 +118,7 @@
             bindings = <&kp RIGHT_BRACKET>, <&kp NUMBER_6>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         excl_8: excl_8 {
@@ -137,7 +127,7 @@
             bindings = <&kp EXCLAMATION>, <&kp NUMBER_8>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         hash_backtick: hash_backtick {
@@ -146,7 +136,7 @@
             bindings = <&kp HASH>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         dollar_tilde: dollar_tilde {
@@ -155,7 +145,7 @@
             bindings = <&kp DOLLAR>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         at_caret: at_caret {
@@ -178,7 +168,7 @@
             bindings = <
 &amp_pct       &lbrckt_7      &lbrace_5  &rbrace_3   &lparen_1  &equal_9  &mo 1                                                                &mo 3          &asterisk_0  &rparen_2  &plus_4    &rbrckt_6             &excl_8   &hash_backtick
 &dollar_tilde  &kp SEMICOLON  &kp COMMA  &kp PERIOD  &kp P      &kp Y     &none                                                                &none          &kp F        &kp G      &kp C      &kp R                 &kp L     &kp SLASH
-&at_caret      &kp A          &kp O      &kp E       &kp U      &kp I     &kp F13        &mt LALT ESC   &kp LGUI      &kp LGUI   &mt LALT DEL  &kp F13        &kp D        &kp H      &kp T      &kp N                 &kp S     &kp MINUS
+&at_caret      &kp A          &kp O      &kp E       &kp U      &kp I     &kp GLOBE      &mt LALT ESC   &kp LGUI      &kp LGUI   &mt LALT DEL  &kp GLOBE      &kp D        &kp H      &kp T      &kp N                 &kp S     &kp MINUS
 &kp LSHFT      &kp SQT        &kp Q      &kp J       &kp K      &kp X                                   &kp HOME      &kp PG_UP                               &kp B        &kp M      &kp W      &kp V                 &kp Z     &kp RSHFT
 &mo 2          &none          &none      &kp DOWN    &kp UP               &mt LCTRL TAB  &kp BACKSPACE  &kp END       &kp PG_DN  &kp SPACE     &mt LCTRL RET               &kp LEFT   &kp RIGHT  &kp NON_US_BACKSLASH  &kp PIPE  &mo 2
             >;
