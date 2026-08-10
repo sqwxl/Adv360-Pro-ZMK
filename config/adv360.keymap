@@ -40,6 +40,132 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        amp_pct: amp_pct {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AMP_PCT";
+            bindings = <&kp AMPERSAND>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        lbrckt_7: lbrckt_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LBRCKT_7";
+            bindings = <&kp LEFT_BRACKET>, <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        lbrace_5: lbrace_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LBRACE_5";
+            bindings = <&kp LEFT_BRACE>, <&kp N5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        rbrace_3: rbrace_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RBRACE_3";
+            bindings = <&kp RIGHT_BRACE>, <&kp N3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        lparen_1: lparen_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAREN_1";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp N1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        equal_9: equal_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUAL_9";
+            bindings = <&kp EQUAL>, <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        asterisk_0: asterisk_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ASTERISK_0";
+            bindings = <&kp ASTERISK>, <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        rparen_2: rparen_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPAREN_2";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        plus_4: plus_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_4";
+            bindings = <&kp PLUS>, <&kp NUMBER_4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        rbrckt_6: rbrckt_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RBRCKT_6";
+            bindings = <&kp RIGHT_BRACKET>, <&kp NUMBER_6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        excl_8: excl_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXCL_8";
+            bindings = <&kp EXCLAMATION>, <&kp NUMBER_8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        hash_backtick: hash_backtick {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HASH_BACKTICK";
+            bindings = <&kp HASH>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dollar_tilde: dollar_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_TILDE";
+            bindings = <&kp DOLLAR>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        at_caret: at_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AT_CARET";
+            bindings = <&kp AT_SIGN>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -50,21 +176,21 @@
 
         default_layer {
             bindings = <
-&kp N1     &kp N2  &kp N3     &kp N4    &kp N5  &kp N6  &mo 1                                                                &mo 3          &kp N7  &kp N8    &kp N9     &kp N0    &kp MINUS  &kp EQUAL
-&kp GRAVE  &kp Q   &kp W      &kp E     &kp R   &kp T   &none                                                                &none          &kp Y   &kp U     &kp I      &kp O     &kp P      &kp LBKT
-&kp RBKT   &kp A   &kp S      &kp D     &kp F   &kp G   &kp F13        &mt LALT ESC   &kp LGUI      &kp LGUI   &mt LALT DEL  &kp F13        &kp H   &kp J     &kp K      &kp L     &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V   &kp B                                 &kp HOME      &kp PG_UP                               &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-&mo 2      &kp N1  &kp GRAVE  &kp DOWN  &kp UP          &mt LCTRL TAB  &kp BACKSPACE  &kp END       &kp PG_DN  &kp SPACE     &mt LCTRL RET          &kp LEFT  &kp RIGHT  &kp BSLH  &kp PIPE   &mo 2
+&amp_pct       &lbrckt_7      &lbrace_5  &rbrace_3   &lparen_1  &equal_9  &mo 1                                                                &mo 3          &asterisk_0  &rparen_2  &plus_4    &rbrckt_6             &excl_8   &hash_backtick
+&dollar_tilde  &kp SEMICOLON  &kp COMMA  &kp PERIOD  &kp P      &kp Y     &none                                                                &none          &kp F        &kp G      &kp C      &kp R                 &kp L     &kp SLASH
+&at_caret      &kp A          &kp O      &kp E       &kp U      &kp I     &kp F13        &mt LALT ESC   &kp LGUI      &kp LGUI   &mt LALT DEL  &kp F13        &kp D        &kp H      &kp T      &kp N                 &kp S     &kp MINUS
+&kp LSHFT      &kp SQT        &kp Q      &kp J       &kp K      &kp X                                   &kp HOME      &kp PG_UP                               &kp B        &kp M      &kp W      &kp V                 &kp Z     &kp RSHFT
+&mo 2          &none          &none      &kp DOWN    &kp UP               &mt LCTRL TAB  &kp BACKSPACE  &kp END       &kp PG_DN  &kp SPACE     &mt LCTRL RET               &kp LEFT   &kp RIGHT  &kp NON_US_BACKSLASH  &kp PIPE  &mo 2
             >;
         };
 
         layer_keypad {
             bindings = <
-&none  &none  &none  &none   &none  &none  &trans                                      &mo 3   &none  &kp KP_NUM  &kp N5      &kp N8     &none            &none
-&none  &none  &none  &trans  &none  &none  &none                                       &none   &none  &kp KP_N7   &kp KP_N8   &kp KP_N9  &kp KP_DIVIDE    &none
-&none  &none  &none  &none   &none  &none  &none   &trans  &trans      &trans  &trans  &none   &none  &kp KP_N4   &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY  &none
-&none  &none  &none  &none   &none  &none                  &trans      &trans                  &none  &kp KP_N1   &kp KP_N2   &kp KP_N3  &kp KP_MINUS     &none
-&mo 2  &none  &none  &none   &none         &trans  &trans  &trans      &trans  &trans  &trans         &kp KP_N0   &kp KP_DOT  &kp PRCNT  &kp KP_PLUS      &mo 2
+&none  &none  &none  &none   &none  &none  &trans                                      &mo 3   &none  &kp KP_NUM  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none            &none
+&none  &none  &none  &trans  &none  &none  &none                                       &none   &none  &kp KP_N7   &kp KP_N8             &kp KP_N9              &kp KP_DIVIDE    &none
+&none  &none  &none  &none   &none  &none  &none   &trans  &trans      &trans  &trans  &none   &none  &kp KP_N4   &kp KP_N5             &kp KP_N6              &kp KP_MULTIPLY  &none
+&none  &none  &none  &none   &none  &none                  &trans      &trans                  &none  &kp KP_N1   &kp KP_N2             &kp KP_N3              &kp KP_MINUS     &none
+&mo 2  &none  &none  &none   &none         &trans  &trans  &trans      &trans  &trans  &trans         &kp KP_N0   &kp KP_DOT            &kp PRCNT              &kp KP_PLUS      &mo 2
             >;
         };
 
